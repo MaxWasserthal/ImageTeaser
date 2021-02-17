@@ -1,0 +1,18 @@
+{
+  "name": "zora/image-teaser",
+  "description": "ImageTeaser",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Zora\\ImageTeaser\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Zora\\ImageTeaser\\ImageTeaser",
+    "label": {
+      "de-DE": "Teaser für 4 Bilder",
+      "en-GB": "Teaser for 4 images"
+    }
+  }
+}

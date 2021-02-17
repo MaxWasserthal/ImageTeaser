@@ -1,0 +1,31 @@
+.teaser-text-wrapper {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    color: #fff;
+    transition: all ease .8s;
+    background: rgba(0,0,0,0.5);
+    font-family: "Inter", sans-serif;
+
+    .cms-element-text {
+        position: absolute;
+        bottom: 0;
+        top: 25%;
+        overflow: hidden;
+        width: 100%;
+    
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+}
+
+.cms-image-container {
+    &:hover {
+        .teaser-text-wrapper {
+            transition: all ease .8s;
+            height: 100%;
+        }
+    }
+}

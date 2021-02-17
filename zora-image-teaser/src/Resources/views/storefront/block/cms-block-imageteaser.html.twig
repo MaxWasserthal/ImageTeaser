@@ -1,0 +1,96 @@
+{% block block_imageteaser %}
+    {% set columns = 4 %}
+    {% set id = element.id %}
+
+    {% block block_imageteaser_left %}
+        <div class="col-md-3">
+            <div class="imageteaser-card">
+                {% block block_imageteaser_left_image %}
+                    {% set element = block.slots.getSlot('left-image') %}
+                    <div data-cms-element-id="{{ id }}">
+                        {% embed "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                            {% block element_image_media %}
+                                {{ parent() }}
+                                {% block block_imageteaser_left_text %}
+                                    {% set element = block.slots.getSlot('left-text') %}
+                                    <div class="teaser-text-wrapper" data-cms-element-id="{{ id }}">
+                                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                    </div>
+                                {% endblock %}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block block_imageteaser_center_left %}
+        <div class="col-md-3">
+            <div class="imageteaser-card">
+                {% block block_imageteaser_center_left_image %}
+                    {% set element = block.slots.getSlot('center-left-image') %}
+                    <div data-cms-element-id="{{ id }}">
+                        {% embed "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                            {% block element_image_media %}
+                                {{ parent() }}
+                                {% block block_imageteaser_center_left_text %}
+                                    {% set element = block.slots.getSlot('center-left-text') %}
+                                    <div class="teaser-text-wrapper" data-cms-element-id="{{ id }}">
+                                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                    </div>
+                                {% endblock %}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block block_imageteaser_center_right %}
+        <div class="col-md-3">
+            <div class="imageteaser-card">
+                {% block block_imageteaser_center_right_image %}
+                    {% set element = block.slots.getSlot('center-right-image') %}
+                    <div data-cms-element-id="{{ id }}">
+                        {% embed "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                            {% block element_image_media %}
+                                {{ parent() }}
+                                {% block block_imageteaser_center_right_text %}
+                                    {% set element = block.slots.getSlot('center-right-text') %}
+                                    <div class="teaser-text-wrapper" data-cms-element-id="{{ id }}">
+                                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                    </div>
+                                {% endblock %}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block block_imageteaser_right %}
+        <div class="col-md-3">
+            <div class="imageteaser-card">
+                {% block block_imageteaser_right_image %}
+                    {% set element = block.slots.getSlot('right-image') %}
+                    <div data-cms-element-id="{{ id }}">
+                        {% embed "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                            {% block element_image_media %}
+                                {{ parent() }}
+                                {% block block_imageteaser_right_text %}
+                                    {% set element = block.slots.getSlot('right-text') %}
+                                    <div class="teaser-text-wrapper" data-cms-element-id="{{ id }}">
+                                        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+                                    </div>
+                                {% endblock %}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

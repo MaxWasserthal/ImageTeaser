@@ -1,0 +1,16 @@
+{
+    "sw-cms": {
+        "elements": {
+            "customImageTeaserElement": {
+                "label": "Image Teaser"
+            }
+        },
+        "blocks": {
+            "text-image": {
+                "imageTeaser": {
+                    "label": "Image teaser"
+                }
+            }
+        }
+    }
+}

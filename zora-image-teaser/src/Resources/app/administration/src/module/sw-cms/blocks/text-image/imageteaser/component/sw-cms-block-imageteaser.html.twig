@@ -1,0 +1,23 @@
+{% block sw_cms_block_imageteaser %}
+    <div class="sw-cms-block-imageteaser">
+        <div class="sw-cms-block-imageteaser_left">
+            <slot name="left-image"></slot>
+            <slot name="left-text"></slot>
+        </div>
+
+        <div class="sw-cms-block-imageteaser_center_left">
+            <slot name="center-left-image"></slot>
+            <slot name="center-left-text"></slot>
+        </div>
+
+        <div class="sw-cms-block-imageteaser_center_right">
+            <slot name="center-right-image"></slot>
+            <slot name="center-right-text"></slot>
+        </div>
+
+        <div class="sw-cms-block-imageteaser_right">
+            <slot name="right-image"></slot>
+            <slot name="right-text"></slot>
+        </div>
+    </div>
+{% endblock %} 
